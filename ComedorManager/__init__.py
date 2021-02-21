@@ -10,8 +10,8 @@ def create_app():
 
     db.init_app(app)
 
-    with app.app_context():
-        from . import models
+    from .models import init_db_command
+    app.cli.add_command(init_db_command)
 
     from . import comedor
     app.register_blueprint(comedor.bp)

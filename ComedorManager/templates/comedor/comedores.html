@@ -15,7 +15,11 @@
     <tr>
         {% for head in heads %}
         <td>
+            {% if head == "semana" %}
+            {{ comedor[head].isocalendar()[1] }}
+            {% else %}
             {{ comedor[head] }}
+            {% endif %}
         </td>
         {% endfor %}
     </tr>
