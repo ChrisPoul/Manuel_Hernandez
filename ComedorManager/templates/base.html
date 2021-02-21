@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<title>{% block title %}{% endblock %}</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<nav>
+    <ul>
+        <li><a href="{{ url_for('comedor.comedores') }}">Comedores</a></li>
+        <li><a href="{{ url_for('comedor.add_comedor') }}">Añadir Comedor</a></li>
+    </ul>
+</nav>
+<header>
+    {% block header %}{% endblock %}
+</header>
+<section>
+    {% block content %}{% endblock %}
+</section>

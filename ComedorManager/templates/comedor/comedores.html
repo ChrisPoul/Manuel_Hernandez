@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block header %}
+<h1>{% block title %}Comedores{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+<table>
+    {% for head in heads %}
+    <th>
+        {{ heads[head] }}
+    </th>
+    {% endfor %}
+    {% for comedor in comedores %}
+    <tr>
+        {% for head in heads %}
+        <td>
+            {{ comedor[head] }}
+        </td>
+        {% endfor %}
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}

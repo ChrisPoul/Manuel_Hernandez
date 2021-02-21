@@ -1,0 +1,10 @@
+*.pyc
+__pycache__/
+
+.pytest_chache/
+
+instance/
+images/
+my_images/
+node_modules/
+out/
